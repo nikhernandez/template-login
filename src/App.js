@@ -1,16 +1,17 @@
-import React from 'react'
+import React, {useContext, useEffect, lazy} from 'react'
+
 import './App.css'
 
 const loadAuthenticatedApp = () => import('./components/authenticated-app')
-const AuthenticatedApp = React.lazy(loadAuthenticatedApp)
-const UnauthenticatedApp = React.lazy(() =>
+const AuthenticatedApp = lazy(loadAuthenticatedApp)
+const UnauthenticatedApp = lazy(() =>
   import('./components/unauthenticated-app')
 )
 //const Prueba = React.lazy(() => import('./components/prueba'))
 
 function App() {
   var user = false
-  React.useEffect(() => {
+  useEffect(() => {
     loadAuthenticatedApp()
   }, [])
   return (
