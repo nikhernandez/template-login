@@ -1,4 +1,5 @@
 import React, {useContext, useEffect, lazy} from 'react'
+import { userContext } from './store/Store'
 
 import './App.css'
 
@@ -10,7 +11,7 @@ const UnauthenticatedApp = lazy(() =>
 //const Prueba = React.lazy(() => import('./components/prueba'))
 
 function App() {
-  var user = false
+  const [user] = useContext(userContext)
   useEffect(() => {
     loadAuthenticatedApp()
   }, [])

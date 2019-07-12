@@ -1,4 +1,14 @@
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+
+function Prueba(user) {
+  const [data, setData] = useState([])
+
+
+  let pru = data
+  console.log(pru.user)
+  return pru.user
+}
 
 const login = async id => {
   const resp = await axios.get('http://localhost:4000/owl/user/' + id)
