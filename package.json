@@ -9,7 +9,7 @@
     "@reach/dialog": "^0.2.9",
     "@reach/visually-hidden": "^0.1.4",
     "@types/reach__dialog": "^0.1.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "epochlabs-react-scripts": "3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
